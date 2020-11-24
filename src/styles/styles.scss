@@ -1,0 +1,149 @@
+$blue: rgba(67, 122, 220, 1);
+$white: rgba(255, 255, 255, 0.7);
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: $white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-navigation {
+  width: 100%;
+  padding: 1rem 0rem;
+}
+
+.container {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 500px;
+  box-shadow: 0 10px 24px 0 rgba(54, 61, 77, 0.15) !important;
+  width: 348px !important;
+  padding: 1rem 48px 48px 48px;
+  margin-top: 2rem;
+  transform: translateY(1rem);
+  animation-name: transitionSection;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transitionSection {
+  0% {
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+.option {
+  padding: 1rem orem;
+}
+
+.page-title {
+  width: 100%;
+  min-width: 100%;
+}
+
+.container-progress {
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: $blue;
+    transition: all 0.25s ease-in forwards;
+  }
+}
+
+.container-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.confirmation-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .container-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+  }
+}
+
+button {
+  border: none;
+  font-size: 1rem;
+  padding: 11px 23px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  &.btn-pri {
+    background-color: $blue;
+    color: #fff;
+  }
+  &.btn-sec {
+    background-color: #fff;
+    border: 2px solid $blue;
+  }
+}
+
+h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 0;
+}
+
+input[type="email"] {
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+
+.blue {
+  color: $blue;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+form {
+  width: 100%;
+}
+
+.selected-false {
+  display: none;
+}
+
+.ui-component {
+  padding: 0.5rem 0rem;
+}
